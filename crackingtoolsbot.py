@@ -28,11 +28,11 @@ data2 = {"accept-encoding": "gzip", "user-agent": "RemotrAndroid/1.5.0"}
 @UltraBot.on(events.NewMessage(pattern="^/proxy$"))
 async def Devsexpo(event):
     if event.sender_id != Config.OWNER_ID:
-        rip = await check_him(Config.JTU_ID, Config.JTU_LINK, event.sender_id)
+        rip = await check_him(Config.CHANNEL_ID, Config.CHANNEL_LINK, event.sender_id)
         if rip is False:
             await event.reply(
                 "**To Use This Bot, Please Join My Channel. :)**",
-                buttons=[Button.url("Join Channel", Config.JTU_LINK)],
+                buttons=[Button.url("Join Channel", Config.CHANNEL_LINK)],
             )
             return
     ok = await event.reply(
@@ -78,7 +78,7 @@ async def Devsexpo(event):
         if rip is False:
             await event.reply(
                 "**To Use This Bot, Please Join My Channel. :)**",
-                buttons=[Button.url("Join Channel", Config.JTU_LINK)],
+                buttons=[Button.url("Join Channel", Config.CHANNEL_LINK)],
             )
             return
     input_str = event.pattern_match.group(1)
@@ -174,11 +174,11 @@ Bot Made By @DevsExpo**"""
 @UltraBot.on(events.NewMessage(pattern="^/nord ?(.*)"))
 async def Devsexpo(event):
     if event.sender_id != Config.OWNER_ID:
-        rip = await check_him(Config.JTU_ID, Config.JTU_LINK, event.sender_id)
+        rip = await check_him(Config.CHANNEL_ID, Config.CHANNEL_LINK, event.sender_id)
         if rip is False:
             await event.reply(
                 "**To Use This Bot, Please Join My Channel. :)**",
-                buttons=[Button.url("Join Channel", Config.JTU_LINK)],
+                buttons=[Button.url("Join Channel", Config.CHANNEL_LINK)],
             )
             return
     input_str = event.pattern_match.group(1)
@@ -280,11 +280,11 @@ Bot Made By @DevsExpo**"""
 @UltraBot.on(events.NewMessage(pattern="^/vortex ?(.*)"))
 async def Devsexpo(event):
     if event.sender_id != Config.OWNER_ID:
-        rip = await check_him(Config.JTU_ID, Config.JTU_LINK, event.sender_id)
+        rip = await check_him(Config.CHANNEL_ID, Config.CHANNEL_LINK, event.sender_id)
         if rip is False:
             await event.reply(
                 "**To Use This Bot, Please Join My Channel. :)**",
-                buttons=[Button.url("Join Channel", Config.JTU_LINK)],
+                buttons=[Button.url("Join Channel", Config.CHANNEL_LINK)],
             )
             return
     input_str = event.pattern_match.group(1)
