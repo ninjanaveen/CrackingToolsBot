@@ -4,7 +4,7 @@ import requests
 from telethon import TelegramClient, events, functions, Button
 from telethon.tl.functions.users import GetFullUserRequest
 from loggers import logging
-from BotConfig import Config
+from Config import Config
 from sql_s.broadcast_sql import add_usersid_in_db, already_added, get_all_users
 
 bot = TelegramClient("bot", api_id=Config.API_ID, api_hash=Config.API_HASH)
@@ -74,7 +74,7 @@ async def Devsexpo(event):
 @UltraBot.on(events.NewMessage(pattern="^/zee5 ?(.*)"))
 async def Devsexpo(event):
     if event.sender_id != Config.OWNER_ID:
-        rip = await check_him(Config.JTU_ID, Config.JTU_LINK, event.sender_id)
+        rip = await check_him(Config.CHANNEL_ID, Config.CHANNEL_LINK, event.sender_id)
         if rip is False:
             await event.reply(
                 "**To Use This Bot, Please Join My Channel. :)**",
@@ -457,7 +457,7 @@ async def atomz(event):
 
 
 async def check_him(chnnl_id, chnnl_link, starkuser):
-    if not Config.JTU_ENABLE:
+    if not Config.JOINCHANNEL_ENABLED:
         return True
     try:
         result = await UltraBot(
@@ -470,7 +470,7 @@ async def check_him(chnnl_id, chnnl_link, starkuser):
         return False
 
 
-print("Bot Is Alive.")
+print("Yems, Your Bomt is womrking!")
 
 
 def startbot():
