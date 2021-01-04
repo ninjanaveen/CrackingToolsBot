@@ -1,1 +1,1 @@
-dyno: python -m crackingtoolsbot
+dyno: python -m bot
